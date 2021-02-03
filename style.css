@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 *,
@@ -39,6 +40,7 @@ body {
   margin-bottom: 30px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .search-input {
@@ -46,11 +48,11 @@ body {
   border-radius: 3px;
   padding: 10px;
   border: 1px solid var(--border-color);
-  font-size: 18px;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  font-size: 1.1rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .search-input:focus,
@@ -78,18 +80,18 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   transition: 0.8s;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
 }
 
 .result-title {
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 .result-snippet {
-  font-size: 15px;
+  font-size: 1rem;
   color: #444;
 }
 
@@ -111,6 +113,7 @@ body {
   height: 40px;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;
+  -webkit-animation: sk-chase 2.5s infinite linear both;
 }
 
 .sk-chase.hidden {
@@ -136,6 +139,10 @@ body {
   border-radius: 100%;
   animation: sk-chase-dot-before 2s infinite ease-in-out both;
   -webkit-animation: sk-chase-dot-before 2s infinite ease-in-out both;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .sk-chase-dot:nth-child(1) {
@@ -189,6 +196,10 @@ body {
 @keyframes sk-chase {
   100% {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }
 
@@ -196,17 +207,29 @@ body {
   80%,
   100% {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }
 
 @keyframes sk-chase-dot-before {
   50% {
     transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4);
+    -o-transform: scale(0.4);
   }
 
   100%,
   0% {
     transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
   }
 }
 
@@ -223,5 +246,15 @@ body {
   .search-results {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 95%;
+  }
+  .title {
+    text-align: center;
+    font-size: 1.3rem;
   }
 }
